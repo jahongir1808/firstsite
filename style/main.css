@@ -757,9 +757,6 @@ nav {
   .home-content {
     margin: 0;
   }
-  .home-btn {
-    justify-content: space-between;
-  }
   .footer-left,
   .footer-right {
     width: 100%;
