@@ -561,6 +561,7 @@ nav {
   .footer-img img {
     margin: 0;
     width: 100%;
+    padding-left: 5px;
   }
   .footer-left,
   .footer-right {
