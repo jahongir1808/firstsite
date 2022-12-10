@@ -8,6 +8,7 @@
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
 }
 
 html {
@@ -71,6 +72,7 @@ nav {
 
 .nav-menus {
   display: flex;
+  align-items: center;
 }
 
 .nav-menus ul {
@@ -206,9 +208,8 @@ nav {
 }
 
 .statistic-cards {
-  position: absolute;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-bottom: 278px;
 }
 
@@ -321,6 +322,7 @@ nav {
 
 .portfolio-card {
   width: 50%;
+  margin-bottom: 30px;
 }
 
 .portfolio-card h2 {
@@ -338,6 +340,11 @@ nav {
   font-weight: 400;
   color: #757575;
   width: 90%;
+  margin-bottom: 10px;
+}
+
+.portfolio-img img {
+  width: 100%;
 }
 
 #portfolio-hover-txt {
@@ -347,7 +354,6 @@ nav {
   font-size: 18px;
   color: #08546c;
   transition: 0.5s;
-  margin: 20px 0 70px;
 }
 
 #portfolio-hover-txt:hover {
@@ -399,8 +405,15 @@ nav {
 
 /* !!--- FOOTER-ABOUT ---!! */
 
+.footer-left,
+.footer-right {
+  width: 50%;
+  display: flex;
+}
+
 .footer-about {
   display: flex;
+  flex-wrap: wrap;
   padding: 105px 0 172px;
 }
 
@@ -453,29 +466,43 @@ nav {
 }
 
 .footer-logo {
-  margin-right: 164px;
+  width: 50%;
 }
 
 .footer-page {
-  margin-right: 168px;
+  width: 50%;
+  text-align: center;
 }
 
 .footer-services {
-  margin-right: 113px;
+  width: 50%;
+  text-align: center;
 }
 #navbar-responsive {
   display: none;
 }
 
 @media (max-width: 1200px) {
+  .statistic {
+    width: 50%;
+  }
+  .statistic-number {
+    font-size: 30px;
+  }
+  
+  .statistic-text {
+    font-size: 10px;
+  }
   .home {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .home-content {
     text-align: center;
+    margin-top: 20px;
   }
   .home-content h1 {
     font-size: 40px;
@@ -484,11 +511,17 @@ nav {
   .home-content p {
     font-size: 10px;
   }
+  .home-btn {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .home-btn button {
     margin-bottom: 20px;
   }
   .home-img img {
-    margin-bottom: 0;
+    margin-bottom: 200px;
     width: 100%;
     text-align: center;
   }
@@ -498,17 +531,7 @@ nav {
   .digital-content h3 {
     font-size: 35px;
   }
-  .digital-cards {
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .portfolio-cards {
-    flex-wrap: wrap;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .portfolio-img img {
     width: 100%;
   }
@@ -516,54 +539,123 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
   .footer-content {
-    margin: 0 0 30px;
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+  .footer-content img {
+    display: none;
   }
   .footer-content p {
     width: 50%;
-    margin-left: 150px;
   }
   .footer-img img {
+    margin: 0;
     width: 100%;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    display: flex;
   }
   .footer-about {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    width: 50%;
+    gap: 50px;
+  }
+  .footer-right {
+    flex-direction: row-reverse;
   }
   .footer-page {
+    width: 50%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  }
+  .footer-logo {
+    width: 50%;
   }
   .footer-services {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer-contact {
+    width: 50%;
   }
 }
 
 @media (max-width: 900px) {
+  .digital {
+    margin-top: 100px;
+  }
   .digital-cards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin: 0;
   }
 
   .digital-card {
-    width: 50%;
-    margin-bottom: 50px;
+    width: 40%;
+    margin-bottom: 10px;
   }
 }
 
 @media (max-width: 800px) {
+  .home-content h1 {
+    font-size: 30px;
+  }
+  .digital-content h3 {
+    font-size: 25px;
+  }
+  .portfolio-content h2 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .portfolio-card h2 {
+    font-size: 25px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    display: flex;
+  }
+  .footer-about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+  .footer-logo-icons img {
+    margin: 10px 5px 20px;
+  }
+  .footer-about p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .footer-page {
+    width: 50%;
+    text-align: center;
+  }
+  .footer-logo {
+    text-align: center;
+    width: 50%;
+  }
+  .footer-services {
+    text-align: center;
+  }
+  .footer-contact {
+    text-align: center;
+    width: 50%;
+  }
+
   nav {
     padding: 20px 10px;
   }
@@ -617,5 +709,80 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-card {
+    width: 100%;
+  }
+  .portfolio-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .statistic {
+    display: none;  
+  }
+  .home-img img {
+    margin-bottom: 20px;
+  }
+  .home-content {
+    margin: 0;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .footer-about {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 50px;
+  }
+  .footer-about h4  {
+    font-size: 22px;
+    margin: 5px 0 15px;
+  }
+  .footer-page {
+    width: 100%;
+  }
+  .footer-services {
+    width: 100%;
+  }
+  .footer-logo {
+    margin: 0;
+    text-align: center;
+  }
+  .footer-page {
+    margin: 0;
+    text-align: center;
+  }
+  .footer-contact {
+    margin: 0;
+    text-align: center;
+  }
+  .footer-contact a {
+    font-size: 15px;
+  }
+  .footer-contact address {
+    font-size: 15px;
+  }
+  .footer-services {
+    margin: 0;
+    text-align: center;
+  }
+  .footer-logo-icons img {
+    margin: 10px 5px 20px;
+  }
+  .footer-about p {
+    font-size: 15px;
+    margin-bottom: 5px;
   }
 }
